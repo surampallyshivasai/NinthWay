@@ -79,13 +79,13 @@ export function Contact() {
                 </div>
                 <div className="text-center">
                   <div className="font-semibold">Email Us</div>
-                  <div className="text-foreground/60 text-sm">ninthwaybranders@gmail.com</div>
+                  <div className="text-foreground/60 text-sm">contact@ninthway.in</div>
                 </div>
               </a>
 
               {/* Call */}
               <a
-                href="tel:+919505062699"
+                href="tel:+918309660814"
                 className="flex flex-col items-center gap-3 hover:scale-105 transition-transform"
               >
                 <div className="p-3 rounded-xl bg-secondary/10">
@@ -93,13 +93,13 @@ export function Contact() {
                 </div>
                 <div className="text-center">
                   <div className="font-semibold">Call Us</div>
-                  <div className="text-foreground/60 text-sm">+91 95050 62699</div>
+                  <div className="text-foreground/60 text-sm">+91 83096 60814</div>
                 </div>
               </a>
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/919505062699?text=Hi%20NinthWay%20Team%2C%20I'm%20interested%20in%20your%20branding%20services."
+                href="https://wa.me/918309660814?text=Hi%20NinthWay%20Team%2C%20I'm%20interested%20in%20your%20branding%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center gap-3 hover:scale-105 transition-transform"
