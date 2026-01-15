@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Palette, Share2, Monitor, Search, TrendingUp, Users } from "lucide-react"
+import { Palette, Share2, Monitor, Search, TrendingUp, Users, Zap } from "lucide-react"
 
 const services = [
   {
@@ -21,15 +21,15 @@ const services = [
     color: "text-accent"
   },
   {
-    icon: TrendingUp,
-    title: "Digital Branding & Marketing",
-    description: "Comprehensive digital strategies that amplify your brand reach and market positioning.",
+    icon: Search,
+    title: "Digital Branding & SEO",
+    description: "Comprehensive digital strategies and search engine optimization to amplify your brand reach, boost visibility, and drive organic traffic to your business.",
     color: "text-primary"
   },
   {
-    icon: Search,
-    title: "SEO",
-    description: "Search engine optimization to boost your visibility and drive organic traffic to your business.",
+    icon: Zap,
+    title: "Business Automation",
+    description: "Streamline your operations with AI-powered intelligent automation solutions that save time, increase efficiency, and transform your business processes.",
     color: "text-secondary"
   },
   {

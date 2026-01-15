@@ -8,6 +8,8 @@ import clientLogos5 from "@/assets/as5.jpg"
 import clientLogos6 from "@/assets/as6.jpg"
 import clientLogos7 from "@/assets/as7.jpg"
 import clientLogos8 from "@/assets/as8.jpg"
+import clientLogos9 from "@/assets/as9.jpeg"
+import clientLogos10 from "@/assets/as10.jpeg"
 import { Crown } from "lucide-react"
 
 const clientLogos = [
@@ -19,6 +21,8 @@ const clientLogos = [
   clientLogos6,
   clientLogos7,
   clientLogos8,
+  clientLogos9,
+  clientLogos10,
 ];
 
 export function Portfolio() {

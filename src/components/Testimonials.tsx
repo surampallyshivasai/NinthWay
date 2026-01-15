@@ -5,14 +5,14 @@ import { Star, Quote } from "lucide-react"
 const testimonials = [
   {
     name: "Voleti Karthik",
-    role: "Co-Founder, Flashoot",
+    role: "Founder, Flashoot",
     content: "Working with NinthWay was a game-changer. They instantly got our vision and crafted a brand identity that captures Flashoot’s fast, bold, and innovative spirit.",
     rating: 5,
     glowColor: "blue" as const
   },
   {
-    name: "Revanth Reddy",
-    role: "Founder, Go Adventure",
+    name: "Deepthi Nuti",
+    role: "Co-Founder, Go Adventure",
     content: "NinthWay didn’t just redesign our brand — they reshaped our digital journey. From sharper leads to stronger engagement, their marketing magic helped us reach more travelers than ever before.",
     rating: 5,
     glowColor: "purple" as const

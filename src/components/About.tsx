@@ -30,10 +30,10 @@ export function About() {
             className="max-w-4xl mx-auto text-center mb-16"
           >
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
-              At Ninthway Branding Agency, we don't just build brands — we craft legacies. Born out of a passion for bold aesthetics and strategic storytelling, we are a premium design powerhouse helping startups, founders, and businesses turn their visions into memorable, futuristic brands.
+              At Ninthway Branding Agency, we don't just build brands — we craft legacies. Born out of a passion for bold aesthetics and strategic storytelling, we are a fully AI-enhanced, premium design powerhouse helping startups, founders, and businesses turn their visions into memorable, futuristic brands.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">
-              We believe branding is more than just a logo or color palette. It's the soul of your business. It's how you communicate, connect, and conquer your market. That's why every element we create — from your identity design to digital presence — is driven by Swiss-style precision, visual richness, and business strategy.
+              We believe branding is more than just a logo or color palette. It's the soul of your business. It's how you communicate, connect, and conquer your market. That's why every element we create — from your identity design to digital presence — is driven by Swiss-style precision, visual richness, business strategy, and cutting-edge AI technology. As a highly AI-integrated brand partner, we leverage artificial intelligence to deliver smarter, faster, and more impactful branding solutions that position your business for success in the digital age.
             </p>
           </motion.div>
           

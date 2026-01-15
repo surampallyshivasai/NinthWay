@@ -208,7 +208,7 @@ export function Contact() {
                   className="w-full flex items-center justify-center gap-2"
                 >
                   <Send className="h-4 w-4" />
-                  Send Message
+                  Get Callback
                 </GradientButton>
               </div>
             </form>
