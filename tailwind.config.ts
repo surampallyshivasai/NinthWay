@@ -94,7 +94,12 @@ export default {
 					}
 				},
 				marquee: {
+					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(-50%)' }
+				},
+				'marquee-reverse': {
+					from: { transform: 'translateX(-50%)' },
+					to: { transform: 'translateX(0)' }
 				},
 				'fade-in': {
 					'0%': {
@@ -115,6 +120,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				marquee: 'marquee var(--duration, 30s) linear infinite',
+				'marquee-reverse': 'marquee-reverse var(--duration, 30s) linear infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'float': 'float 3s ease-in-out infinite'
 			}

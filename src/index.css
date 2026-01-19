@@ -319,6 +319,24 @@ All colors MUST be HSL.
     --stop-5: 85.76%;
   }
 
+  .vertical-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .neon-box {
+    padding: 6px 8px;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.3), rgba(255, 23, 68, 0.2));
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.4), inset 0 0 15px rgba(255, 107, 157, 0.15);
+    border-radius: 6px;
+    display: inline-block;
+  }
+
   .gradient-button-variant {
     --color-1: #000022;
     --color-2: #1f3f6d;

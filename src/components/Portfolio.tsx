@@ -25,6 +25,18 @@ const clientLogos = [
   clientLogos10,
 ];
 
+// Event logos - add your event marketing logos here
+const eventLogos = [
+  clientLogos1,
+  clientLogos2,
+  clientLogos3,
+  clientLogos4,
+  clientLogos5,
+  clientLogos6,
+  clientLogos7,
+  clientLogos8,
+];
+
 export function Portfolio() {
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-b from-background to-muted/10">
@@ -48,27 +60,71 @@ export function Portfolio() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Marquee pauseOnHover speed={40}>
-            {clientLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center mx-8 min-w-[120px]"
-              >
-                <img
-                  src={logo}
-                  alt={`Client Logo ${index + 1}`}
-                  className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out filter grayscale hover:grayscale-0"
-                />
-              </div>
-            ))}
-          </Marquee>
-        </motion.div>
+        {/* Brands Carousel */}
+        <div className="flex items-center gap-6 mb-16">
+          <div className="flex-shrink-0 flex items-center justify-center sm:mt-24 mt-10">
+            <div className="neon-box">
+              <span className="vertical-label text-red-400">
+                BRANDS
+              </span>
+            </div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="flex-1"
+          >
+            <Marquee pauseOnHover speed={40}>
+              {clientLogos.map((logo, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center mx-8 min-w-[120px]"
+                >
+                  <img
+                    src={logo}
+                    alt={`Client Logo ${index + 1}`}
+                    className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out filter grayscale hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </Marquee>
+          </motion.div>
+        </div>
+
+        {/* Events Carousel */}
+        <div className="flex items-center gap-6">
+          <div className="flex-shrink-0 flex items-center justify-center sm:mt-24 mt-10">
+            <div className="neon-box">
+              <span className="vertical-label text-red-400">
+                EVENTS
+              </span>
+            </div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex-1"
+          >
+            <Marquee pauseOnHover speed={40} direction="right">
+              {eventLogos.map((logo, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center mx-8 min-w-[120px]"
+                >
+                  <img
+                    src={logo}
+                    alt={`Event Logo ${index + 1}`}
+                    className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out filter grayscale hover:grayscale-0"
+                  />
+                </div>
+              ))}
+            </Marquee>
+          </motion.div>
+        </div>
       </div>
     </section>
   )
