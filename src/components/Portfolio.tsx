@@ -10,6 +10,8 @@ import clientLogos7 from "@/assets/as7.jpg"
 import clientLogos8 from "@/assets/as8.jpg"
 import clientLogos9 from "@/assets/as9.jpeg"
 import clientLogos10 from "@/assets/as10.jpeg"
+import eventLogo1 from "@/assets/ev1.png"
+import eventLogo2 from "@/assets/ev2.jpeg"
 import { Crown } from "lucide-react"
 
 const clientLogos = [
@@ -25,16 +27,10 @@ const clientLogos = [
   clientLogos10,
 ];
 
-// Event logos - add your event marketing logos here
+// Event logos
 const eventLogos = [
-  clientLogos1,
-  clientLogos2,
-  clientLogos3,
-  clientLogos4,
-  clientLogos5,
-  clientLogos6,
-  clientLogos7,
-  clientLogos8,
+  eventLogo1,
+  eventLogo2,
 ];
 
 export function Portfolio() {
@@ -85,7 +81,7 @@ export function Portfolio() {
                   <img
                     src={logo}
                     alt={`Client Logo ${index + 1}`}
-                    className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out filter grayscale hover:grayscale-0"
+                    className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out"
                   />
                 </div>
               ))}
@@ -118,7 +114,7 @@ export function Portfolio() {
                   <img
                     src={logo}
                     alt={`Event Logo ${index + 1}`}
-                    className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out filter grayscale hover:grayscale-0"
+                    className="h-16 w-auto opacity-100 hover:opacity-100 transition duration-300 ease-in-out"
                   />
                 </div>
               ))}
