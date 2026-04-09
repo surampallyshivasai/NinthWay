@@ -41,10 +41,10 @@ export function Testimonials() {
             <Quote className="h-4 w-4 text-primary" />
             <span className="text-sm text-primary font-medium">Testimonials</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Client Success Stories
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
             Hear from the leaders who trusted us to craft their legacies
           </p>
         </motion.div>
@@ -62,7 +62,7 @@ export function Testimonials() {
               <GlowCard 
                 glowColor={testimonial.glowColor}
                 customSize
-                className="w-full h-full min-h-[300px] p-6 flex flex-col"
+                className="w-full h-full min-h-[280px] sm:min-h-[300px] p-4 sm:p-6 flex flex-col"
               >
                 <div className="flex flex-col h-full">
                   <div className="flex mb-4">
@@ -71,13 +71,13 @@ export function Testimonials() {
                     ))}
                   </div>
                   
-                  <blockquote className="text-foreground/80 mb-6 leading-relaxed flex-grow">
+                  <blockquote className="text-sm sm:text-base text-foreground/80 mb-4 sm:mb-6 leading-relaxed flex-grow">
                     "{testimonial.content}"
                   </blockquote>
                   
-                  <div className="border-t border-border pt-4">
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-foreground/60">{testimonial.role}</div>
+                  <div className="border-t border-border pt-3 sm:pt-4">
+                    <div className="font-semibold text-sm sm:text-base text-foreground">{testimonial.name}</div>
+                    <div className="text-xs sm:text-sm text-foreground/60">{testimonial.role}</div>
                   </div>
                 </div>
               </GlowCard>

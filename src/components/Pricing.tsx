@@ -62,10 +62,10 @@ export function Pricing() {
             <Crown className="h-4 w-4 text-primary" />
             <span className="text-sm text-primary font-medium">Pricing</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Premium Packages
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
             Choose the perfect package to transform your vision into a legacy
           </p>
         </motion.div>

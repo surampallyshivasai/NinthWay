@@ -55,10 +55,10 @@ export function Services() {
             <Palette className="h-4 w-4 text-primary" />
             <span className="text-sm text-primary font-medium">Our Services</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Premium Solutions
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
             Comprehensive branding services designed to elevate your business and create lasting impact
           </p>
         </motion.div>
@@ -71,13 +71,13 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8 hover:bg-card/50 transition-elegant hover:scale-105"
+              className="group bg-card/30 backdrop-blur-sm border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:bg-card/50 transition-colors"
             >
-              <div className={`inline-flex p-3 rounded-xl bg-current/10 mb-6 ${service.color}`}>
-                <service.icon className={`h-6 w-6 ${service.color}`} />
+              <div className={`inline-flex p-2 sm:p-3 rounded-lg sm:rounded-xl bg-current/10 mb-4 sm:mb-6 ${service.color}`}>
+                <service.icon className={`h-5 sm:h-6 w-5 sm:w-6 ${service.color}`} />
               </div>
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{service.title}</h3>
-              <p className="text-foreground/70 leading-relaxed">{service.description}</p>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-4 text-foreground line-clamp-2">{service.title}</h3>
+              <p className="text-xs sm:text-sm text-foreground/70 leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

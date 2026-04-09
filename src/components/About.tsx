@@ -27,12 +27,12 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center mb-12"
+            className="max-w-4xl mx-auto text-center mb-8 sm:mb-12"
           >
-            <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-foreground/80 mb-4 sm:mb-6 leading-relaxed">
               At Ninthway Branding Agency, we don't just build brands — we craft legacies. Born out of a passion for bold aesthetics and strategic storytelling, we are a fully AI-enhanced, premium design powerhouse helping startups, founders, and businesses turn their visions into memorable, futuristic brands.
             </p>
-            <p className="text-lg text-foreground/80 leading-relaxed">
+            <p className="text-sm sm:text-base text-foreground/80 leading-relaxed">
               We believe branding is more than just a logo or color palette. It's the soul of your business. It's how you communicate, connect, and conquer your market. That's why every element we create — from your identity design to digital presence — is driven by Swiss-style precision, visual richness, business strategy, and cutting-edge AI technology. As a highly AI-integrated brand partner, we leverage artificial intelligence to deliver smarter, faster, and more impactful branding solutions that position your business for success in the digital age.
             </p>
           </motion.div>
@@ -46,8 +46,8 @@ export function About() {
           >
             <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 text-center">
               <Sparkles className="h-8 w-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold text-primary">Premium Design</h3>
-              <p className="text-sm text-foreground/60 mt-2">Swiss-style precision meets bold aesthetics</p>
+              <h3 className="font-semibold text-sm sm:text-base text-primary">Premium Design</h3>
+              <p className="text-xs sm:text-sm text-foreground/60 mt-1 sm:mt-2">Swiss-style precision meets bold aesthetics</p>
             </div>
             <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 text-center">
               <Zap className="h-8 w-8 text-secondary mx-auto mb-3" />

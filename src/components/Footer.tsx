@@ -17,10 +17,10 @@ export function Footer() {
               <img src="/logo.png" alt="NinthWay Logo" className="h-10 w-10 object-contain" />
               <span className="text-2xl font-bold text-gradient-royal">NinthWay</span>
             </div>
-            <p className="text-foreground/70 mb-6 max-w-md">
+            <p className="text-foreground/70 mb-4 sm:mb-6 max-w-md text-sm">
               Crafting royal legacies through premium branding, strategic design, and futuristic digital experiences.
             </p>
-            <div className="space-y-3 mb-6 text-sm text-foreground/70">
+            <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 text-xs sm:text-sm text-foreground/70">
               <div className="flex items-start gap-2">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                 <p>Grava Business Park, Neopolis, Kokapet, Hyderabad, Telangana 500075</p>

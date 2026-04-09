@@ -42,16 +42,16 @@ export function Portfolio() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Crown className="h-4 w-4 text-primary" />
             <span className="text-sm text-primary font-medium">Our Clients</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Trusted by Leaders
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-foreground/70 max-w-2xl mx-auto">
             We've had the privilege of crafting legacies for industry leaders and innovative startups
           </p>
         </motion.div>
