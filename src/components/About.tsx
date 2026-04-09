@@ -3,15 +3,15 @@ import { Crown, Zap, Target, Sparkles } from "lucide-react"
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-muted/10">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-12 sm:py-16 bg-gradient-to-b from-background to-muted/10">
+      <div className="container mx-auto px-4 sm:px-3">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="mb-12"
+            className="mb-10"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <Crown className="h-4 w-4 text-primary" />
@@ -27,7 +27,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto text-center mb-16"
+            className="max-w-4xl mx-auto text-center mb-12"
           >
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
               At Ninthway Branding Agency, we don't just build brands — we craft legacies. Born out of a passion for bold aesthetics and strategic storytelling, we are a fully AI-enhanced, premium design powerhouse helping startups, founders, and businesses turn their visions into memorable, futuristic brands.
@@ -42,7 +42,7 @@ export function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto"
           >
             <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 text-center">
               <Sparkles className="h-8 w-8 text-primary mx-auto mb-3" />

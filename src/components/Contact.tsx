@@ -2,18 +2,52 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { Phone, Mail, MessageSquare, Send } from "lucide-react"
 import { GradientButton } from "@/components/ui/gradient-button"
+import { sendContactEmail } from "@/lib/emailjs"
+import { useToast } from "@/hooks/use-toast"
 
 export function Contact() {
+  const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phone: '',
     whatsapp: '',
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+
+    if (!formData.name || !formData.email || !formData.phone || !formData.whatsapp || !formData.message) {
+      toast({ description: "Please fill all required fields", variant: "destructive" })
+      return
+    }
+
+    if (formData.phone.length !== 10) {
+      toast({ description: "Phone number must be 10 digits", variant: "destructive" })
+      return
+    }
+
+    if (formData.whatsapp.length !== 10) {
+      toast({ description: "WhatsApp number must be 10 digits", variant: "destructive" })
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      await sendContactEmail(formData)
+      toast({ description: "Message sent successfully! We'll get back to you soon." })
+      setFormData({ name: '', email: '', phone: '', whatsapp: '', message: '' })
+    } catch (error) {
+      toast({ 
+        description: "Failed to send message. Please try again or contact us directly.", 
+        variant: "destructive" 
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,14 +65,14 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/5">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-12 sm:py-16 bg-muted/5">
+      <div className="container mx-auto px-4 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Phone className="h-4 w-4 text-primary" />
@@ -123,10 +157,9 @@ export function Contact() {
             viewport={{ once: true }}
           >
             <form
-  action="https://formsubmit.co/ninthwaybranders@gmail.com"
-  method="POST"
-  className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8"
->
+              onSubmit={handleSubmit}
+              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8"
+            >
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -141,6 +174,22 @@ export function Contact() {
                     required
                     className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border focus:border-primary focus:outline-none transition-colors"
                     placeholder="Your full name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-background/50 border border-border focus:border-primary focus:outline-none transition-colors"
+                    placeholder="your@email.com"
                   />
                 </div>
 
@@ -205,10 +254,11 @@ export function Contact() {
 
                 <GradientButton
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full flex items-center justify-center gap-2"
                 >
                   <Send className="h-4 w-4" />
-                  Get Callback
+                  {isSubmitting ? 'Sending...' : 'Get Callback'}
                 </GradientButton>
               </div>
             </form>

@@ -14,9 +14,10 @@ interface NavItem {
 interface NavBarProps {
   items: NavItem[]
   className?: string
+  logoUrl?: string
 }
 
-export function NavBar({ items, className }: NavBarProps) {
+export function NavBar({ items, className, logoUrl }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -31,14 +32,27 @@ export function NavBar({ items, className }: NavBarProps) {
   }, [])
 
   useEffect(() => {
+    // Handle route detection for pages like /careers
+    const currentPath = window.location.pathname
+    for (const item of items) {
+      if (item.url.startsWith('/') && item.url === currentPath) {
+        setActiveTab(item.name)
+        return
+      }
+    }
+
+    // Handle scroll detection for anchor links on home page
     const handleScroll = () => {
-      const sections = items.map(item => item.url.substring(1))
+      // Only use scroll detection for hash-based anchors (starting with #)
+      const hashItems = items.filter(item => item.url.startsWith('#'))
+      if (hashItems.length === 0) return
+
       const scrollPosition = window.scrollY + 100
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i])
+      for (let i = hashItems.length - 1; i >= 0; i--) {
+        const section = document.getElementById(hashItems[i].url.substring(1))
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveTab(items[i].name)
+          setActiveTab(hashItems[i].name)
           break
         }
       }
@@ -50,9 +64,19 @@ export function NavBar({ items, className }: NavBarProps) {
 
   const handleClick = (item: NavItem) => {
     setActiveTab(item.name)
-    const element = document.getElementById(item.url.substring(1))
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+    // Check if it's a route (starts with /) or an anchor (starts with #)
+    if (item.url.startsWith('/')) {
+      // Navigate to different route
+      window.location.href = item.url
+    } else {
+      // Try to scroll to anchor on current page
+      const element = document.getElementById(item.url.substring(1))
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        // If anchor doesn't exist on current page, navigate to home with the anchor
+        window.location.href = `/${item.url}`
+      }
     }
   }
 
@@ -64,6 +88,11 @@ export function NavBar({ items, className }: NavBarProps) {
       )}
     >
       <div className="flex items-center gap-3 bg-background/5 border border-border backdrop-blur-lg py-1 px-1 rounded-full shadow-lg">
+        {logoUrl && (
+          <a href="/" className="flex items-center justify-center px-3 py-2 rounded-full hover:bg-muted/50 transition-colors">
+            <img src={logoUrl} alt="Logo" className="h-8 w-8 object-contain" />
+          </a>
+        )}
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name

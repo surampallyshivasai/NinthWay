@@ -42,14 +42,14 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-muted/5">
-      <div className="container mx-auto px-4">
+    <section id="services" className="py-12 sm:py-16 bg-muted/5">
+      <div className="container mx-auto px-4 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Palette className="h-4 w-4 text-primary" />
@@ -63,7 +63,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

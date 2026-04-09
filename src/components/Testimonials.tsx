@@ -28,14 +28,14 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 bg-muted/5">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-12 sm:py-16 bg-muted/5">
+      <div className="container mx-auto px-4 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Quote className="h-4 w-4 text-primary" />
@@ -49,7 +49,7 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}

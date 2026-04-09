@@ -49,14 +49,14 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/10">
-      <div className="container mx-auto px-4">
+    <section className="py-12 sm:py-16 bg-gradient-to-b from-background to-muted/10">
+      <div className="container mx-auto px-4 sm:px-3">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Crown className="h-4 w-4 text-primary" />
@@ -71,7 +71,7 @@ export function Pricing() {
         </motion.div>
 
         {/* Desktop Grid */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="hidden lg:grid lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -127,7 +127,7 @@ export function Pricing() {
 
         {/* Mobile/Tablet Carousel */}
         <div className="lg:hidden overflow-x-auto pb-6">
-          <div className="flex gap-6 min-w-max px-4">
+          <div className="flex gap-3 sm:gap-4 min-w-max px-4 sm:px-3">
             {plans.map((plan, index) => (
               <motion.div
                 key={plan.name}
