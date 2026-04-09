@@ -57,9 +57,9 @@ export function Portfolio() {
         </motion.div>
 
         {/* Brands Carousel */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3 mb-10 sm:mb-12">
-          <div className="flex-shrink-0 flex items-center justify-center sm:mt-20 mt-0 w-full sm:w-auto">
-            <div className="neon-box">
+        <div className="flex items-center gap-2 sm:gap-3 mb-10 sm:mb-12">
+          <div className="flex-shrink-0 flex items-center justify-center sm:mt-20 mt-0">
+            <div className="neon-box scale-75 sm:scale-100 origin-left">
               <span className="vertical-label text-primary font-bold tracking-wider text-lg">
                 BRANDS
               </span>
@@ -90,9 +90,9 @@ export function Portfolio() {
         </div>
 
         {/* Events Carousel */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
-          <div className="flex-shrink-0 flex items-center justify-center sm:mt-20 mt-0 w-full sm:w-auto">
-            <div className="neon-box">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex-shrink-0 flex items-center justify-center sm:mt-20 mt-0">
+            <div className="neon-box scale-75 sm:scale-100 origin-left">
               <span className="vertical-label text-primary font-bold tracking-wider text-lg">
                 EVENTS
               </span>
