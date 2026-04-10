@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { JobApplicationForm } from "@/components/JobApplicationForm"
 import { jobListings } from "@/data/jobs"
+import careerPageImage from "@/assets/careerpage1.png"
 
 const benefits = [
   {
@@ -108,12 +109,9 @@ export function Careers() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl border border-primary/20 flex items-center justify-center"
+              className="relative h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl border border-primary/20 flex items-center justify-center overflow-hidden"
             >
-              <div className="text-center">
-                <Users className="h-24 w-24 text-primary/40 mx-auto mb-4" />
-                <p className="text-foreground/60">Building the future of branding</p>
-              </div>
+              <img src={careerPageImage} alt="NinthWay Team" className="w-full h-full object-cover" />
             </motion.div>
           </motion.div>
         </div>
